@@ -71,15 +71,15 @@
     _VerTextField.frame = CGRectMake(80, 190, 270, 20);
 
     _thereLabel = [[UILabel alloc] init];
-    _thereLabel.frame = CGRectMake(30,220,self.view.frame.size.width - 220, 1);
+    _thereLabel.frame = CGRectMake(30,220,(self.view.frame.size.width - 60)*2/3, 1);
     _thereLabel.backgroundColor = [UIColor whiteColor];
     
     //发送按钮
     _sendbtn = [[UIButton alloc] init];
-    _sendbtn.backgroundColor = [UIColor yellowColor];
-    _sendbtn.frame = CGRectMake(245,190,self.view.frame.size.width - 260, 30);
+    _sendbtn.backgroundColor = [UIColor greenColor];
+    _sendbtn.frame = CGRectMake(((self.view.frame.size.width - 60)*2/3)+35,190,(self.view.frame.size.width - 60)/3 - 5, 30);
     _sendbtn.titleLabel.font = [UIFont systemFontOfSize: 20];
-    _sendbtn.titleLabel.textColor = [UIColor blackColor];
+    _sendbtn.titleLabel.textColor = [UIColor whiteColor];
     [_sendbtn setTitle : @"发送验证码"forState:UIControlStateNormal];
     [_sendbtn.layer setCornerRadius : 5.0];
     
@@ -102,7 +102,7 @@
     
     //注册账号
     _RegistrationLabel = [[UILabel alloc] init];
-    _RegistrationLabel.frame = CGRectMake(300, 630, self.view.frame.size.width -315, 15);
+    _RegistrationLabel.frame = CGRectMake(346, 630, self.view.frame.size.width -315, 15);
     _RegistrationLabel.text = @"注册账号";
     _RegistrationLabel.textColor = [UIColor whiteColor];
     _RegistrationLabel.font = [UIFont systemFontOfSize:10];
