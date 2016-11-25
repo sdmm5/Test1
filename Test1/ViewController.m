@@ -32,14 +32,18 @@
     
     // Do any additional setup after loading the view, typically from a nib.
     //输入密码列
+   
     _PhoneLable = [[UILabel alloc]init];
     _PhoneLable.frame = CGRectMake(30, 130, 45, 20);
     _PhoneLable.text = @"手机号码";
     _PhoneLable.textColor = [UIColor whiteColor];
-    _PhoneLable.font = [UIFont systemFontOfSize:(17)];
-    
+    _PhoneLable.font = [UIFont systemFontOfSize:(11)];
     _PhoneTextField = [[UITextField alloc]init];
     _PhoneTextField.frame = CGRectMake(130, 130, 270, 20);
+   // _PhoneLable.lineBreakMode=UILineBreakModeCharacterWrap;
+   // _PhoneLable.userInteractionEnabled=YES;
+   // _PhoneLable.enabled=YES;
+
     
     _oneLabel = [[UILabel alloc] init];
     _oneLabel.frame = CGRectMake(30, 159,self.view.frame.size.width - 60, 1);
@@ -51,7 +55,7 @@
     _PasswordLable.frame =CGRectMake(30, 250, 45, 20);
     _PasswordLable.text = @"密码";
     _PasswordLable.textColor = [UIColor whiteColor];
-    _PasswordLable.font = [UIFont systemFontOfSize:17];
+    _PasswordLable.font = [UIFont systemFontOfSize:11];
     
     _PwdTextField = [[UITextField alloc] init];
     _PwdTextField.frame = CGRectMake(30, 250, 270, 20);
@@ -60,12 +64,13 @@
     _towLabel.frame = CGRectMake(30, 281, self.view.frame.size.width -60, 1);
     _towLabel.backgroundColor = [UIColor whiteColor];
     
+    
     //发送信息列
     _VerficationLable = [[UILabel alloc] init];
     _VerficationLable.frame = CGRectMake(30, 190, 45, 20);
     _VerficationLable.text = @"发送信息";
     _VerficationLable.textColor = [UIColor whiteColor];
-    _VerficationLable.font = [UIFont systemFontOfSize:17];
+    _VerficationLable.font = [UIFont systemFontOfSize:11];
     
     _VerTextField = [[UITextField alloc] init];
     _VerTextField.frame = CGRectMake(80, 190, 270, 20);

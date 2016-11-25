@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<NSURLConnectionDelegate,NSURLConnectionDelegate>
 
 @end
 
@@ -17,7 +17,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //表示访问的服务器
+    NSURL *url = [NSURL URLWithString:@"http://www.jnshu.com"];
+    
+    //表示客户端发起的网络请求的请求内容
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+    //启动网络请求
+    [connection start];
+    
     return YES;
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    NSLog(@"%@",response);
 }
 
 
